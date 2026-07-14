@@ -1,1 +1,0 @@
-A Delegate in C# is a special type that stores the reference (address) of a method, allowing it to be called indirectly through a delegate object. It can reference only those methods that have the same return type and parameter list as the delegate declaration.
