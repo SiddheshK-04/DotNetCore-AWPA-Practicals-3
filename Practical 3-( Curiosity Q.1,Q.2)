@@ -1,0 +1,89 @@
+using System;
+delegate void StudentDelegate();
+class Student
+{
+    int total;
+    double percentage;
+    public void CalculateTotal()
+    {
+        int m1 = 70, m2 = 80, m3 = 90;
+        total = m1 + m2 + m3;
+        Console.WriteLine("Total Marks: " + total);
+    }
+    public void CalculatePercentage()
+    {
+        percentage = total / 3.0;
+        Console.WriteLine("Percentage: " + percentage);
+    }
+    public void DisplayGrade()
+    {
+        if (percentage >= 75)
+            Console.WriteLine("Grade: A");
+        else if (percentage >= 60)
+            Console.WriteLine("Grade: B");
+        else if (percentage >= 50)
+            Console.WriteLine("Grade: C");
+        else
+            Console.WriteLine("Grade: Fail");
+    }
+    public void DisplayResult()
+    {
+        if (percentage >= 50)
+            Console.WriteLine("Result: Pass");
+        else
+            Console.WriteLine("Result: Fail");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        Student s = new Student();
+        StudentDelegate obj;
+        obj = s.CalculateTotal;
+        obj += s.CalculatePercentage;
+        obj += s.DisplayGrade;
+        obj += s.DisplayResult;
+        obj();
+        Console.WriteLine("Siddhesh K (T009)");
+
+        using System;
+
+delegate void AdmissionDelegate();
+class Admission
+{
+    public void VerifyDocuments()
+    {
+        Console.WriteLine("Documents Verified");
+    }
+    public void GenerateRollNumber()
+    {
+        Console.WriteLine("Roll Number Generated");
+    }
+    public void AllocateDivision()
+    {
+        Console.WriteLine("Division Allocated");
+    }
+    public void SendSMS()
+    {
+        Console.WriteLine("SMS Sent to Student");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        Admission a = new Admission();
+        AdmissionDelegate obj;
+        obj = a.VerifyDocuments;
+        obj += a.GenerateRollNumber;
+        obj += a.AllocateDivision;
+        obj += a.SendSMS;
+        Console.WriteLine("Confirm Admission Clicked...\n");
+        obj();
+        Console.WriteLine("\nSiddhesh K (T009)");
+    }
+}
+
+    }
+}
