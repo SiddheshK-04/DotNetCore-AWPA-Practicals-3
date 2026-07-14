@@ -1,3 +1,4 @@
+//Q.1) 
 using System;
 delegate void StudentDelegate();
 class Student
@@ -47,7 +48,13 @@ class Program
         obj();
         Console.WriteLine("Siddhesh K (T009)");
 
-        using System;
+
+
+
+
+//Q. 2) 
+
+using System;
 
 delegate void AdmissionDelegate();
 class Admission
